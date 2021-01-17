@@ -15,4 +15,6 @@ breeds = [
   "Stegosaurus",
   "Ankylosaurus",
   "Triceratops"
-].each{ |b| DinosaurBreed.create(name: b)}
+].each{ |b| DinosaurBreed.find_or_create_by(name: b)}
+
+diet_types = ["Herbivore", "Carnivore"].each{ |t| DietType.find_or_create_by(name: t) }
