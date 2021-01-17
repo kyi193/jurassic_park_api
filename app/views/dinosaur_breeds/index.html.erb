@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Diet Type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @dinosaur_breeds.each do |dinosaur_breed| %>
       <tr>
         <td><%= dinosaur_breed.name %></td>
+        <td><%= dinosaur_breed.diet_type.name %></td>
         <td><%= link_to 'Show', dinosaur_breed %></td>
         <td><%= link_to 'Edit', edit_dinosaur_breed_path(dinosaur_breed) %></td>
         <td><%= link_to 'Destroy', dinosaur_breed, method: :delete, data: { confirm: 'Are you sure?' } %></td>

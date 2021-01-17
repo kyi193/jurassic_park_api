@@ -6,15 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-breeds = [
+diet_types = ["Herbivore", "Carnivore"].each{ |t| DietType.find_or_create_by(name: t) }
+
+carnivore_diet = DietType.find_by(name: "Carnivore")
+herbivore_diet = DietType.find_by(name: "Herbivore")
+
+carnivores = [
   "Tyrannosaurus",
   "Velociraptor",
   "Spinosaurus",
   "Megalosaurus",
+].each{ |b| DinosaurBreed.find_or_create_by(name: b, diet_type: carnivore_diet)}
+
+herbivores = [
   "Brachiosaurus",
   "Stegosaurus",
   "Ankylosaurus",
   "Triceratops"
-].each{ |b| DinosaurBreed.find_or_create_by(name: b)}
-
-diet_types = ["Herbivore", "Carnivore"].each{ |t| DietType.find_or_create_by(name: t) }
+].each{ |b| DinosaurBreed.find_or_create_by(name: b, diet_type: herbivore_diet)}
