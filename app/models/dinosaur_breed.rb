@@ -1,0 +1,2 @@
+class DinosaurBreed < ApplicationRecord
+end
