@@ -24,3 +24,5 @@ herbivores = [
   "Ankylosaurus",
   "Triceratops"
 ].each{ |b| DinosaurBreed.find_or_create_by(name: b, diet_type: herbivore_diet)}
+
+cage_statuses = ["ACTIVE", "DOWN"].each{ |s| CageStatus.find_or_create_by(name: s)}
