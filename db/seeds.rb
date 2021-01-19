@@ -26,3 +26,9 @@ herbivores = [
 ].each{ |b| DinosaurBreed.find_or_create_by(name: b, diet_type: herbivore_diet)}
 
 cage_statuses = ["ACTIVE", "DOWN"].each{ |s| CageStatus.find_or_create_by(name: s)}
+
+(1..5).each do |i|
+  c = Cage.find_or_initialize_by(max_capacity: i)
+  c.cage_status = CageStatus.find_by(name: "DOWN") unless c.persisted?
+  c.save!
+end

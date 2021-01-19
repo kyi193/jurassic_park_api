@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Max capacity:</strong>
+  <%= @cage.max_capacity %>
+</p>
+
+<p>
+  <strong>Num of dinosaurs:</strong>
+  <%= @cage.num_of_dinosaurs %>
+</p>
+
+<%= link_to 'Edit', edit_cage_path(@cage) %> |
+<%= link_to 'Back', cages_path %>

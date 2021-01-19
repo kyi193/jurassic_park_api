@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cages
   resources :cage_statuses
   resources :dinosaurs
   resources :diet_types
