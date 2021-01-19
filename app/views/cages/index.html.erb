@@ -7,6 +7,7 @@
     <tr>
       <th>Max capacity</th>
       <th>Num of dinosaurs</th>
+      <th>Cage Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= cage.max_capacity %></td>
         <td><%= cage.dinosaurs.count %></td>
+        <td><%= cage.cage_status.name %></td>
         <td><%= link_to 'Show', cage %></td>
         <td><%= link_to 'Edit', edit_cage_path(cage) %></td>
         <td><%= link_to 'Destroy', cage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
