@@ -14,7 +14,7 @@ class CagesController < ApplicationController
 
   # GET /cages/new
   def new
-    @cage = Cage.new
+
   end
 
   # GET /cages/1/edit
