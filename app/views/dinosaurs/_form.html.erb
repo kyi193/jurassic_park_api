@@ -16,6 +16,17 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :cage_number %>
+    <%= form.collection_select :cage_id, Cage.all, :id,:id, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dinosaur_breed %>
+    <%= form.collection_select :dinosaur_breed_id, DinosaurBreed.all, :id,:name, include_blank: true %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

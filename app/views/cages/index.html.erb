@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Max capacity</th>
       <th>Num of dinosaurs</th>
       <th>Cage Status</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @cages.each do |cage| %>
       <tr>
+        <td><%= cage.id %></td>
         <td><%= cage.max_capacity %></td>
         <td><%= cage.dinosaurs.count %></td>
         <td><%= cage.cage_status.name %></td>

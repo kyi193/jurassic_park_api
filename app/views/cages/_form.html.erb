@@ -16,10 +16,7 @@
     <%= form.number_field :max_capacity %>
   </div>
 
-  <div class="field">
-    <%= form.label :num_of_dinosaurs %>
-    <%= form.number_field :num_of_dinosaurs %>
-  </div>
+  <%= form.collection_select :cage_status_id, CageStatus.all, :id,:name, include_blank: true %>
 
   <div class="actions">
     <%= form.submit %>

@@ -26,7 +26,6 @@ class DinosaursController < ApplicationController
   # POST /dinosaurs.json
   def create
     @dinosaur = Dinosaur.new(dinosaur_params)
-
     respond_to do |format|
       if @dinosaur.save
         format.html { redirect_to @dinosaur, notice: 'Dinosaur was successfully created.' }
@@ -70,6 +69,6 @@ class DinosaursController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dinosaur_params
-      params.require(:dinosaur).permit(:name)
+      params.require(:dinosaur).permit(:name, :cage_id, :dinosaur_breed_id)
     end
 end

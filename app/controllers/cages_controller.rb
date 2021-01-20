@@ -16,7 +16,7 @@ class CagesController < ApplicationController
 
   # GET /cages/new
   def new
-
+    @cage = Cage.new
   end
 
   # GET /cages/1/edit
@@ -71,6 +71,6 @@ class CagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cage_params
-      params.require(:cage).permit(:max_capacity, :num_of_dinosaurs)
+      params.require(:cage).permit(:max_capacity, :num_of_dinosaurs, :cage_status_id)
     end
 end
