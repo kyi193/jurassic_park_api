@@ -25,7 +25,7 @@ Dinosaur must be placed into an existing cage id that has a cage status of ACTIV
 ![alt text](https://i.ibb.co/gFCFWrP/Screen-Shot-2021-01-20-at-1-39-45-PM.png)
 
 
-The route is located in '/cages/:id'
+The route is located in '/cages/:id.json'
 
 ## How to make a GET request to view all dinosaurs of a specific breed:
 ![alt text](https://i.ibb.co/h9pGPZ8/Screen-Shot-2021-01-20-at-1-44-07-PM.png)
@@ -37,7 +37,7 @@ The route is located in '/dinosaurs.json?dinosaur_breed=:dinosaur_breed' (for ex
 ![alt text](https://i.ibb.co/djhmKkF/Screen-Shot-2021-01-20-at-1-46-50-PM.png)
 
 
-The route is located in 'http://localhost:3000/cages.json?cage_status=:cage_status' (either ACTIVE or DOWN)
+The route is located in '/cages.json?cage_status=:cage_status' (either ACTIVE or DOWN)
 
 ## How to PATCH dinosaur to another cage that is ACTIVE:
 ![alt text](https://i.ibb.co/xszsHvg/Screen-Shot-2021-01-20-at-1-54-03-PM.png)
