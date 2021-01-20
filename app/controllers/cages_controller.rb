@@ -5,6 +5,8 @@ class CagesController < ApplicationController
   # GET /cages.json
   def index
     @cages = Cage.all
+    @cages = @cages.filter_by_max_capacity(params[:max_capacity]) if params[:max_capacity].present?
+    @cages = @cages.filter_by_cage_status(params[:cage_status]) if params[:cage_status].present?
   end
 
   # GET /cages/1

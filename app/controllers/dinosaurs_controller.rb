@@ -5,6 +5,7 @@ class DinosaursController < ApplicationController
   # GET /dinosaurs.json
   def index
     @dinosaurs = Dinosaur.all
+    @dinosaurs = @dinosaurs.filter_by_breed(params[:dinosaur_breed]) if params[:dinosaur_breed].present?
   end
 
   # GET /dinosaurs/1

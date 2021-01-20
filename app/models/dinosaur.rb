@@ -5,6 +5,7 @@ class Dinosaur < ApplicationRecord
   validate :cage_occupancy_available
   validate :cage_is_active
   validate :dinosaur_breed_is_valid
+  scope :filter_by_breed, -> (dinosaur_breed) { joins(:dinosaur_breed).where(dinosaur_breed:{name: dinosaur_breed})}
 
   def cage_occupancy_available
     return if cage.max_capacity > cage.dinosaurs.count
