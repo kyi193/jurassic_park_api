@@ -4,6 +4,8 @@
 Run in console:
 ```
 bin/rails server
+rails db:migrate
+rails db:seed
 ```
 Things to improve on/need:
   1. Enumerate certain values such as Active and Down cage statuses
