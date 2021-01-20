@@ -28,7 +28,7 @@ Dinosaur must be placed into an existing cage id that has a cage status of ACTIV
 The route is located in '/cages/:id.json'
 
 ## How to make a GET request to view all dinosaurs of a specific breed:
-![alt text](https://i.ibb.co/h9pGPZ8/Screen-Shot-2021-01-20-at-1-44-07-PM.png)
+![alt text](https://i.ibb.co/fvN4LKw/Screen-Shot-2021-01-20-at-2-25-55-PM.png)
 
 
 The route is located in '/dinosaurs.json?dinosaur_breed=:dinosaur_breed' (for example: Tyrannosaurus or Stegosaurus)
