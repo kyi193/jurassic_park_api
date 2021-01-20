@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_19_000220) do
+ActiveRecord::Schema.define(version: 2021_01_20_030008) do
 
   create_table "cage_statuses", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_01_19_000220) do
 
   create_table "cages", force: :cascade do |t|
     t.integer "max_capacity"
-    t.integer "num_of_dinosaurs"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "cage_status_id"
